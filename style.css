@@ -22,8 +22,9 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
-	font-family: 'arial';
-	src: url("/assets/arial-black.ttf");
+	font-family: Arial;
+	font-weight: 900;
+	src: url(font/ArialBlack.woff);
 }
 
 * {
@@ -37,6 +38,17 @@ body {
 	overflow-x: hidden;
 	font-family: 'Lato', sans-serif;
 	transition: 1s;
+}
+
+.h2.brand {
+	color: var(--color-black);
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 45px;
+	letter-spacing: 4px;
+	line-height: 1;
+	display: block;
+	transition: color 1s;
 }
 
 html {
@@ -100,7 +112,7 @@ body.active .to-light-mode {
 	font-size: 240px;
 	font-weight: bold;
 	line-height: 1;
-	transition: color 0.2s;
+	transition: color 0.5s;
 }
 
 @media (max-width: 1120px) {
@@ -189,14 +201,14 @@ body.active .to-light-mode {
 
 .btn {
 	text-decoration: none;
-	color: var(--primary-color);
+	color: var(--color-black);
 	font-size: 25px;
-	background-color: var(--color-black);
+	background-color: var(--primary-color);
 	display: inline-block;
 	padding: 22px 40px;
 	border-radius: 10px;
 	box-shadow: 0px 33px 46px #0000004A;
-	transition: color 1s;
+	transition: color 1s, background-color 1s;
 }
 
 .btn.button--sticky {
@@ -230,7 +242,7 @@ body.active .to-light-mode {
 }
 
 .contact-form {
-	width: calc(100% - 40px);
+	width: 100%;
 	max-width: 1020px;
 	margin-inline: auto;
 	z-index: 4;
@@ -308,7 +320,7 @@ body.active .to-light-mode {
 @media (max-width: 768px) {
 	.contact-form .input, .contact-form input,
 	.contact-form select, .contact-form .textarea {
-		font-size: 18px;
+		font-size: 28px !important;
 	}
 }
 
@@ -344,7 +356,7 @@ body.active .to-light-mode {
 
 @media (max-width: 768px) {
 	.contact-form .gform_wrapper .gform_fields {
-		grid-row-gap: 10px;
+		grid-row-gap: 46px !important;
 	}
 }
 
@@ -361,7 +373,7 @@ body.active .to-light-mode {
 	line-height: normal;
 	margin-inline: auto;
 	cursor: pointer;
-	transition: color 1s;
+	transition: color 0.3s, background-color 0.3s;
 	border-radius: 8px;
 	height: auto;
 	margin-top: 145px;
@@ -370,7 +382,13 @@ body.active .to-light-mode {
 @media (max-width: 768px) {
 	.contact-form #gform_submit_button_1 {
 		max-width: 100% !important;
+		margin-top: 54px !important;
 	}
+}
+
+.contact-form #gform_submit_button_1:hover {
+	background-color: var(--color-black) !important;
+	color: var(--primary-color) !important;
 }
 
 .contact-form .textarea {
@@ -1485,6 +1503,36 @@ body.active .to-light-mode {
 	}
 }
 
+.logos.padding-medium {
+	padding-block: 163px 170px;
+}
+
+@media (max-width: 768px) {
+	.logos.padding-medium {
+		padding-block: 110px 93px;
+	}
+}
+
+.logos.padding-large {
+	padding-block: 176px 144px;
+}
+
+@media (max-width: 768px) {
+	.logos.padding-large {
+		padding-block: 120px 102px;
+	}
+}
+
+.logos.padding-bottom-large {
+	padding-block: 144px 264px;
+}
+
+@media (max-width: 768px) {
+	.logos.padding-bottom-large {
+		padding-block: 103px 101px;
+	}
+}
+
 .logos .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -1571,16 +1619,60 @@ body.active .to-light-mode {
 	max-width: 769px;
 }
 
+@media (max-width: 768px) {
+	.text#designed .section-description {
+		font-size: 36px;
+		max-width: 280px;
+		margin: 10px auto 31px;
+	}
+}
+
 .text#why .section-title {
 	max-width: 418px;
 	margin-inline: auto;
 	line-height: 1;
 }
 
+@media (max-width: 768px) {
+	.text#why .section-description {
+		font-size: 36px;
+		max-width: 280px;
+		margin: 50px auto 35px;
+	}
+}
+
 .text#process .section-title {
 	max-width: 630px;
 	margin-inline: auto;
 	line-height: 1;
+}
+
+@media (max-width: 768px) {
+	.text#process .section-title {
+		max-width: 260px;
+		margin-inline: auto;
+	}
+	.text#process .section-description {
+		font-size: 36px;
+		max-width: 310px;
+		margin: 17px auto 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.text#how .section-title {
+		font-size: 60px;
+		max-width: 200px;
+		margin-inline: auto;
+	}
+	.text#how .section-description {
+		font-size: 36px;
+		max-width: 320px;
+		margin: 50px auto 0;
+	}
+	.text#how .content {
+		margin-top: 35px;
+	}
 }
 
 .text__img {
@@ -1635,7 +1727,8 @@ body.active .to-light-mode {
 @media (max-width: 1024px) {
 	.cards .container {
 		grid-template-columns: 1fr;
-		margin-top: 75px;
+		margin-top: 88px;
+		row-gap: 98px;
 	}
 }
 
@@ -1653,6 +1746,12 @@ body.active .to-light-mode {
 @media (max-width: 1520px) {
 	.cards__card {
 		padding-inline: 25px;
+	}
+}
+
+@media (max-width: 768px) {
+	.cards__card {
+		max-width: 384px;
 	}
 }
 
@@ -1688,24 +1787,26 @@ body.active .to-light-mode {
 	font-weight: 300;
 }
 
-@media (max-width: 1024px) {
-	.cards__card .content p {
-		font-size: 20px;
-	}
-}
-
 .cards__card-title {
 	font-size: 50px;
 }
 
-.cards__card:nth-child(3), .cards__card:nth-child(6) {
-	grid-column-start: 1;
-	grid-column-end: 3;
+@media (min-width: 768px) {
+	.cards__card:nth-child(3), .cards__card:nth-child(6) {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
 }
 
 .cards.cards--simple-borders .container {
 	grid-template-columns: 1fr;
 	row-gap: 118px;
+}
+
+@media (max-width: 1024px) {
+	.cards.cards--simple-borders .container {
+		margin-top: 65px;
+	}
 }
 
 .cards.cards--simple-borders .cards__card:nth-child(3),
@@ -1722,6 +1823,12 @@ body.active .to-light-mode {
 	display: none;
 }
 
+@media (max-width: 768px) {
+	.cards.cards--simple-borders .cards__card .section-description {
+		font-size: 30px;
+	}
+}
+
 .site-footer {
 	color: var(--color-black);
 	transition: color 1s;
@@ -1730,7 +1837,7 @@ body.active .to-light-mode {
 
 @media (max-width: 768px) {
 	.site-footer {
-		padding-top: 115px;
+		padding-block: 115px 227px;
 	}
 }
 

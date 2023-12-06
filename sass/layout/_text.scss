@@ -30,6 +30,13 @@
     .content {
       max-width: 769px;
     }
+     @media (max-width: 768px) { 
+      .section-description {
+        font-size: 36px;
+        max-width: 280px;
+        margin: 10px auto 31px;
+      }
+    }
   }
 
   &#why {
@@ -38,6 +45,14 @@
       margin-inline: auto;
       line-height: 1;
     }
+
+    @media (max-width: 768px) { 
+      .section-description {
+        font-size: 36px;
+        max-width: 280px;
+        margin: 50px auto 35px;
+      }
+    }
   }
 
   &#process {
@@ -45,6 +60,39 @@
       max-width: 630px;
       margin-inline: auto;
       line-height: 1;
+    }
+
+    @media (max-width: 768px) {
+      .section-title {
+        max-width: 260px;
+        margin-inline: auto;
+      }
+
+      .section-description {
+        font-size: 36px;
+        max-width: 310px;
+        margin: 17px auto 0;
+      }
+    }
+  }
+
+  &#how {
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 60px;
+        max-width: 200px;
+        margin-inline: auto;
+      }
+
+      .section-description {
+        font-size: 36px;
+        max-width: 320px;
+        margin: 50px auto 0;
+      }
+
+      .content {
+        margin-top: 35px;
+      }
     }
   }
 

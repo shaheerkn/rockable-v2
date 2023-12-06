@@ -13,8 +13,8 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="container tcenter">
-				<a href="#" class="brand" data-aos="fade-up">
-           <img src="<?php echo get_template_directory_uri()?>/assets/brand-black.svg" />
+				<a href="#" class="h2 brand" data-aos="fade-up">
+           ROCKABLE
         </a>
 				<p>
 					LOGO DESIGN AWESOMENESS SINCE 2003.
