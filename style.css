@@ -22,9 +22,12 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @font-face {
-	font-family: Arial;
+	font-family: 'Arial';
+	src: url("fonts/Arial-Black.eot");
+	src: url("fonts/Arial-Black.eot?#iefix") format("embedded-opentype"), url("fonts/Arial-Black.woff2") format("woff2"), url("fonts/Arial-Black.woff") format("woff"), url("fonts/Arial-Black.ttf") format("truetype"), url("fonts/Arial-Black.svg#Arial-Black") format("svg");
 	font-weight: 900;
-	src: url(font/ArialBlack.woff);
+	font-style: normal;
+	font-display: swap;
 }
 
 * {
@@ -43,7 +46,8 @@ body {
 .h2.brand {
 	color: var(--color-black);
 	text-decoration: none;
-	font-family: Arial;
+	font-family: 'Arial';
+	font-weight: 900;
 	font-size: 45px;
 	letter-spacing: 4px;
 	line-height: 1;
