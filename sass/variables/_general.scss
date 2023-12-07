@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 @font-face {
-    font-family: 'Arial';
-    src: url('fonts/Arial-Black.eot');
-    src: url('fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
-        url('fonts/Arial-Black.woff2') format('woff2'),
-        url('fonts/Arial-Black.woff') format('woff'),
-        url('fonts/Arial-Black.ttf') format('truetype'),
-        url('fonts/Arial-Black.svg#Arial-Black') format('svg');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Arial';
+  src: url('fonts/Arial-Black.eot');
+  src: url('fonts/Arial-Black.eot?#iefix') format('embedded-opentype'),
+      url('fonts/Arial-Black.woff2') format('woff2'),
+      url('fonts/Arial-Black.woff') format('woff'),
+      url('fonts/Arial-Black.ttf') format('truetype'),
+      url('fonts/Arial-Black.svg#Arial-Black') format('svg');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -100,7 +100,6 @@ body.active .to-light-mode {
   font-size: 240px;
   font-weight: bold;
   line-height: 1;
-  transition: color 0.5s;
 
   @media (max-width: 1120px) {
     font-size: 120px;
@@ -189,8 +188,15 @@ body.active .to-light-mode {
   transition: color 1s, background-color 1s;
 
   &.button--sticky {
-    position: static;
+    position: fixed;
     text-transform: uppercase;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 50px;
+    position: fixed;
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none;
 
     @media (max-width: 1024px) {
       max-width: 340px;
@@ -199,10 +205,12 @@ body.active .to-light-mode {
   }
 
   &.button--active {
-    transform: translateX(-50%);
-    left: 50%;
-    bottom: 50px;
-    position: fixed;
+    // transform: translateX(-50%);
+    // left: 50%;
+    // bottom: 50px;
+    // position: fixed;
+    opacity: 1;
+    pointer-events: all;
   }
 
   @media (max-width: 1024px) {
@@ -349,31 +357,46 @@ body.active .to-light-mode {
 
   .textarea {
     @extend .input;
-      height: 60px !important;
+    // height: 60px !important;
     font-family: inherit !important;
     min-block-size: auto !important;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &.thankyou {
-    h2 {
-      font-size: 108px;
-      line-height: 1.2;
-
-      @media (max-width: 768px) {
-        font-size: 40px;
-      }
-    }
-
     p {
       font-size: 18px;
+      color: var(--color-black);
     }
 
-    img {
+    svg {
       max-width: 100%;
+      margin-bottom: 33px;
+    }
+  
+    svg, path, rect {
+      fill: var(--color-black);
+      stroke: var(--color-black);
     }
 
     @media (max-width: 1000px) {
       padding-top: 0;
+
+    }
+    .container {
+      @media (max-width: 768px) {
+        max-width: 300px;
+
+        .section-title {
+          line-height: 98px;
+          font-size: 120px;
+          margin-bottom: 20px;
+          transition: none;
+        }
+      }
     }
   }
 
@@ -402,5 +425,13 @@ body.active .to-light-mode {
   .h1 {
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+
+.thankyou + footer {
+  padding-top: 208px;
+
+  @media (max-width: 768px) {
+    padding-block: 150px 10px;
   }
 }

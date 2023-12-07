@@ -16,30 +16,37 @@ document.addEventListener( 'DOMContentLoaded', function() {
     const innerHeight = window.innerHeight - 130;
 
     if (actualPosition && buttonSticky) {
-    buttonSticky.classList.add('button--active');
+      buttonSticky.classList.add('button--active');
 
-    window.addEventListener('scroll', ()=> {
-      if (actualPosition.getBoundingClientRect().y < innerHeight) {
-        buttonSticky.classList.remove('button--active')
-      } else {
-        buttonSticky.classList.add('button--active')
-      }
-    })
-}
+      window.addEventListener('scroll', ()=> {
+        if (actualPosition.getBoundingClientRect().y < innerHeight) {
+          buttonSticky.classList.remove('button--active')
+        } else {
+          buttonSticky.classList.add('button--active')
+        }
+      })
+    }
+
+var textarea = document.querySelector('.textarea');
+  // Set the initial height
+  textarea.addEventListener('input', function() {
+    autoExpand(textarea);
+  });
+
+  autoExpand(textarea)
+
+  function autoExpand(textarea) {
+    // Reset the height to 0 to properly calculate scrollHeight
+    textarea.style.height = '0px';
+
+    // Set the minimum height
+    var minHeight = 60;
+
+    // Calculate the new height based on content
+    var newHeight = Math.max(minHeight, textarea.scrollHeight);
+
+    // Apply the new height
+    textarea.style.height = newHeight + 10 + 'px';
+  }
 })
 
-
-const logoSvgs = document.querySelectorAll('.logos__logo svg')
-
-// logoSvgs.forEach(svg => {
-//   // Get the fill and stroke attributes
-//   const fill = svg.getAttribute('fill');
-//   const stroke = svg.getAttribute('stroke');
-
-//   // Check if fill or stroke is present and assign the value to --color-primary
-//   if (fill) {
-//     document.documentElement.style.setProperty('--color-primary', fill);
-//   } else if (stroke) {
-//     document.documentElement.style.setProperty('--color-primary', stroke);
-//   }
-// });

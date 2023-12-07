@@ -10,7 +10,7 @@ get_header();
 		<div class="container">
 			<?php
 				the_field( 'image' );
-				the_field( 'title' );
+				theme_the_field( 'title', '<h2 class="section-title">', '</h2>', true );
 			?>
 		</div>
 	</section>

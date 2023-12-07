@@ -57,7 +57,7 @@
 
   &#process {
     .section-title {
-      max-width: 630px;
+      max-width: 650px;
       margin-inline: auto;
       line-height: 1;
     }
@@ -125,9 +125,9 @@
     }
   }
 
-  &:not(.button--sticky) .sticky-btn {
-    display: none;
-  }
+  // &:not(.button--sticky) .sticky-btn {
+  //   display: none;
+  // }
 }
 
 
