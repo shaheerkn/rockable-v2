@@ -1595,9 +1595,13 @@ body.active .to-light-mode {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: background-color 0.3s;
 	background-color: var(--color-black);
 	border-radius: 50%;
-	transition: background-color 4s;
+}
+
+.logos__logo:hover {
+	background: #fff;
 }
 
 .logos__logo svg, .logos__logo path, .logos__logo rect {
@@ -1606,10 +1610,6 @@ body.active .to-light-mode {
 
 .logos__logo:not(:hover) svg, .logos__logo:not(:hover) path, .logos__logo:not(:hover) rect {
 	fill: var(--primary-color);
-}
-
-.logos__logo:hover {
-	background-color: #fff;
 }
 
 @media (max-width: 1350px) and (min-width: 1245px) {

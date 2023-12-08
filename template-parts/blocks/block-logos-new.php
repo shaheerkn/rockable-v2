@@ -20,8 +20,10 @@ if (get_sub_field('section_classes')) {
 
         while ( have_rows( $images ) ) : the_row();
           ?>
-          <div class="logos__logo <?php echo ( get_sub_field( 'hide_on_mobile' ) ) ? 'hide' : ''; ?>" data-aos="fade-up" data-aos-duration="1000">
-            <?php theme_get_attachment( get_sub_field('image') , 'full', '', true, true ); ?>
+          <div data-aos="fade-up" data-aos-duration="1000">
+            <div class="logos__logo <?php echo ( get_sub_field( 'hide_on_mobile' ) ) ? 'hide' : ''; ?>">
+              <?php theme_get_attachment( get_sub_field('image') , 'full', '', true, true ); ?>
+            </div>
           </div>
         <?php endwhile; ?>
       </div>
