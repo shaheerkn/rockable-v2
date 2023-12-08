@@ -61,12 +61,21 @@
     justify-content: center;
     background-color: var(--color-black);
     border-radius: 50%;
-    transition: background-color 1s;
+    transition: background-color 4s;
 
-    svg, path, rect {
-      fill: var(--primary-color);
-      stroke: var(--primary-color);
+    svg, path, rect {  transition: fill 0.3s; }
+
+    &:not(:hover) {
+      svg, path, rect {
+        fill: var(--primary-color);
+        // stroke: var(--primary-color);
+      }
     }
+
+    &:hover {
+      background-color: #fff;
+    }
+
 
     @media (max-width: 1350px) and (min-width: 1245px) {
       width: 280px;

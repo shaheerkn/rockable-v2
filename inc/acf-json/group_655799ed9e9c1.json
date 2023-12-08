@@ -286,6 +286,32 @@
                                     "mime_types": "",
                                     "preview_size": "medium",
                                     "parent_repeater": "field_65579dd145cfc"
+                                },
+                                {
+                                    "key": "field_65737b28211ef",
+                                    "label": "Colourful logo",
+                                    "name": "colourful_logo",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_65579dd145cfc"
                                 }
                             ]
                         },
@@ -1206,5 +1232,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1701814001
+    "modified": 1702067066
 }
