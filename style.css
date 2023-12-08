@@ -1600,16 +1600,20 @@ body.active .to-light-mode {
 	border-radius: 50%;
 }
 
-.logos__logo:hover {
-	background: #fff;
-}
-
 .logos__logo svg, .logos__logo path, .logos__logo rect {
 	transition: fill 0.3s;
 }
 
-.logos__logo:not(:hover) svg, .logos__logo:not(:hover) path, .logos__logo:not(:hover) rect {
+.logos__logo svg, .logos__logo path, .logos__logo rect {
 	fill: var(--primary-color);
+}
+
+.logos__logo svg {
+	transition: transform 0.3s;
+}
+
+.logos__logo:hover svg {
+	transform: scale(1.1);
 }
 
 @media (max-width: 1350px) and (min-width: 1245px) {

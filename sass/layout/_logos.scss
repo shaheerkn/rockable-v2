@@ -63,20 +63,21 @@
     background-color: var(--color-black);
     border-radius: 50%;
 
-    &:hover {
-      background: #fff;
-    }
 
     svg, path, rect {  transition: fill 0.3s; }
 
-    &:not(:hover) {
       svg, path, rect {
         fill: var(--primary-color);
         // stroke: var(--primary-color);
       }
+
+    svg {
+      transition: transform 0.3s;
     }
 
-
+    &:hover svg {
+      transform: scale(1.1);
+    }
     @media (max-width: 1350px) and (min-width: 1245px) {
       width: 280px;
       height: 280px;
